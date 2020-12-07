@@ -24,6 +24,5 @@ public class Student {
 	public int getMathScore() {
 		return mathScore;
 	}
-	
-	
+
 }// end of class

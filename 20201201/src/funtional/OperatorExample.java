@@ -7,6 +7,7 @@ public class OperatorExample {// 필드선언한거
 
 	static int maxOrMin(IntBinaryOperator oper) {// 따로 선언 안하면 디폴트값으로 선언됨
 		int result = 0;
+
 		for (int number : scores) {
 			result = oper.applyAsInt(result, number);
 		}
@@ -26,7 +27,7 @@ public class OperatorExample {// 필드선언한거
 		int minValue = maxOrMin(new IntBinaryOperator() {
 			@Override
 			public int applyAsInt(int left, int right) {
-				// System.out.println(left + "-" + right);
+				System.out.println(left + "-" + right);
 				return left != 0 && left < right ? left : right;
 			}
 		});
